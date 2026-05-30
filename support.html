@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Duopy&amp;Paste — Support</title>
+<style>
+  :root { color-scheme: light dark; }
+  body { max-width: 720px; margin: 6vh auto; padding: 0 20px;
+         font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", sans-serif; }
+  h1 { font-size: 1.5rem; margin-bottom: .2em; }
+  h2 { font-size: 1.05rem; margin-top: 2.2em; color: #6a5acd; }
+  h3 { font-size: 1rem; margin-top: 1.4em; }
+  .muted { color: #888; font-size: .9rem; }
+  hr { border: none; border-top: 1px solid #8884; margin: 2.5em 0; }
+  code, kbd { background: #8882; padding: 1px 5px; border-radius: 4px; font-family: ui-monospace, Menlo, monospace; }
+  a { color: #6a5acd; }
+  ul, ol { padding-left: 1.4em; }
+</style>
+</head>
+<body>
+
+<h1>Duopy&amp;Paste — Support</h1>
+<p class="muted">Last updated: 2026-05-30</p>
+
+<p>Duopy&amp;Paste is a macOS menu-bar utility that cleans formatting artifacts
+(hard line breaks, indentation, quote bars, table borders, inline Markdown
+markers) from text you copy out of terminals and AI coding assistants.</p>
+
+<h2>How to use</h2>
+<ol>
+<li>Select the text in any app.</li>
+<li>Press <kbd>⌘C</kbd> twice within 1.5 seconds (a "double-copy").</li>
+<li>The cleaned text is now on your clipboard — press <kbd>⌘V</kbd> to paste it anywhere.</li>
+</ol>
+<p>A single <kbd>⌘C</kbd> never triggers cleaning. Duopy&amp;Paste only acts when
+you deliberately double-press, so there's no false capture.</p>
+
+<h2>Common questions</h2>
+
+<h3>Nothing happened when I double-copied</h3>
+<ul>
+<li>The two presses must be within 1.5 seconds.</li>
+<li>The cleaner only writes back if the content actually changed. If your selection had no formatting artifacts to clean, the clipboard stays the same — that's expected.</li>
+<li>Check that the menu-bar icon is present (the app is running).</li>
+</ul>
+
+<h3>How do I see the cleaning history?</h3>
+<p>Click the menu-bar icon. The dropdown panel shows the last 10 cleaned items
+side by side — "original" on the left, "cleaned" on the right. Click either
+column to copy that version back to your clipboard.</p>
+
+<h3>Does the history persist across restarts?</h3>
+<p>No. The history is kept only in memory and is discarded when you quit
+the app.</p>
+
+<h3>Does it work with non-ASCII text (Chinese, Japanese, etc.)?</h3>
+<p>Yes. The cleaner is CJK-aware — it joins wrapped CJK lines without inserting
+a space (which would be ugly), while joining wrapped English lines with one
+space so they read naturally.</p>
+
+<h3>Will it break my code blocks or tables?</h3>
+<p>No. Cleaning is conservative: code blocks, lists, and table structure are
+preserved. Only the noise around them is removed.</p>
+
+<h3>How do I enable launch-at-login?</h3>
+<p>Click the menu-bar icon to open the panel and toggle <strong>Launch at Login</strong>.</p>
+
+<h3>Privacy</h3>
+<p>Duopy&amp;Paste has no network access. Nothing is collected, transmitted,
+stored, or shared. See the <a href="./">Privacy Policy</a> for details.</p>
+
+<h2>Contact</h2>
+<p>Bug reports, feature requests, or general questions:
+<a href="https://github.com/silvery5d">github.com/silvery5d</a></p>
+
+<hr>
+
+<h1 lang="zh-Hans">Duopy&amp;Paste — 技术支持</h1>
+<p class="muted">最后更新：2026-05-30</p>
+
+<p lang="zh-Hans">Duopy&amp;Paste 是一个 macOS 菜单栏小工具，专为清洗从终端和
+AI 编程助手复制出来的「格式痕迹」（硬换行、缩进、引用竖线、表格边框、行内
+Markdown 标记）。</p>
+
+<h2 lang="zh-Hans">使用方法</h2>
+<ol lang="zh-Hans">
+<li>在任意 app 里选中需要清洗的文本。</li>
+<li>1.5 秒内按两次 <kbd>⌘C</kbd>（连按两次复制）。</li>
+<li>剪贴板里已是清洗后的版本——按 <kbd>⌘V</kbd> 即可粘到任何地方。</li>
+</ol>
+<p lang="zh-Hans">单次 <kbd>⌘C</kbd> 永远不会触发清洗，只有你「连按两次」时才动作，
+没有误抓。</p>
+
+<h2 lang="zh-Hans">常见问题</h2>
+
+<h3 lang="zh-Hans">我双击复制了，但好像什么都没发生</h3>
+<ul lang="zh-Hans">
+<li>两次按键必须在 1.5 秒内。</li>
+<li>清洗器只在内容真的有变化时才写回剪贴板。如果你复制的本来就是干净文本（没有格式痕迹可清），剪贴板保持原样是正常的。</li>
+<li>确认菜单栏图标存在（app 正在运行）。</li>
+</ul>
+
+<h3 lang="zh-Hans">怎么看清洗历史？</h3>
+<p lang="zh-Hans">点击菜单栏图标。下拉面板里最近 10 条清洗记录并排显示——左侧是
+「原文」，右侧是「清洗后」。点击其中任一栏即可重新复制回剪贴板。</p>
+
+<h3 lang="zh-Hans">历史会持久保存吗？</h3>
+<p lang="zh-Hans">不会。历史仅保存在内存中，应用退出即清除。</p>
+
+<h3 lang="zh-Hans">支持中文/日文/韩文等非 ASCII 文本吗？</h3>
+<p lang="zh-Hans">支持。清洗器对 CJK 智能识别——中文折行合并时不会插空格（避免变丑），
+英文折行合并时则会保留一个空格，读起来都自然。</p>
+
+<h3 lang="zh-Hans">会不会破坏我的代码块或表格？</h3>
+<p lang="zh-Hans">不会。清洗策略是保守的：代码块、列表、表格的内部结构完整保留，
+只去掉它们周围的杂质。</p>
+
+<h3 lang="zh-Hans">怎么开启开机自启？</h3>
+<p lang="zh-Hans">点开菜单栏面板，打开<strong>登录时启动</strong>开关。</p>
+
+<h3 lang="zh-Hans">隐私</h3>
+<p lang="zh-Hans">Duopy&amp;Paste 没有任何网络访问，不收集、不传输、不存储、
+不分享任何数据。详见<a href="./">隐私政策</a>。</p>
+
+<h2 lang="zh-Hans">联系方式</h2>
+<p lang="zh-Hans">bug 反馈、功能建议或一般问题：
+<a href="https://github.com/silvery5d">github.com/silvery5d</a></p>
+
+</body>
+</html>
